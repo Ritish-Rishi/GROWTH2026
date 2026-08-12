@@ -613,6 +613,13 @@ ol li {
     width: 5%;
   }
 }
+/*
+@media (max-width: 768px) {
+  .icon-boxes .icon-box {
+    min-height: 280px;
+  }
+}
+  */
 
 @media (max-width: 768px),
 (max-height: 700px) {
