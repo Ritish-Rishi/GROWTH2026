@@ -285,5 +285,85 @@
       mirror: false
     })
   });
+/*
+   * Multi-Stage Important Dates Countdown Timer with Auto-Strikethrough
+   */
+  const initCountdown = () => {
+    const milestones = [
+      {
+        id: "date-abstract",
+        label: "Abstract Deadline In:",
+        date: new Date("August 16, 2026 23:59:59 GMT+0530").getTime()
+      },
+      {
+        id: "date-paper",
+        label: "Full Paper Deadline In:",
+        date: new Date("August 25, 2026 23:59:59 GMT+0530").getTime()
+      },
+      {
+        id: "date-registration",
+        label: "Registration Closes In:",
+        date: new Date("August 26, 2026 23:59:59 GMT+0530").getTime()
+      }
+    ];
 
+    const labelEl = document.getElementById("countdown-label");
+    const timerContainer = document.getElementById("countdown-timer");
+
+    if (!labelEl || !timerContainer) return;
+
+    const updateTimer = () => {
+      const now = new Date().getTime();
+
+      // Strike out passed deadlines
+      milestones.forEach(m => {
+        const itemEl = document.getElementById(m.id);
+        if (itemEl) {
+          if (now > m.date) {
+            itemEl.classList.add("date-passed");
+          } else {
+            itemEl.classList.remove("date-passed");
+          }
+        }
+      });
+
+      // Find the upcoming milestone
+      const currentMilestone = milestones.find(m => m.date > now);
+
+      if (!currentMilestone) {
+        labelEl.textContent = "Conference Status";
+        timerContainer.innerHTML = "<span class='text-danger fw-bold py-1'>Registrations Closed</span>";
+        clearInterval(timerInterval);
+        return;
+      }
+
+      // Restore digits markup if needed
+      if (!document.getElementById("days")) {
+        timerContainer.innerHTML = `
+          <div class="time-box"><span id="days">00</span><small>Days</small></div>
+          <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
+          <div class="time-box"><span id="mins">00</span><small>Mins</small></div>
+          <div class="time-box"><span id="secs">00</span><small>Secs</small></div>
+        `;
+      }
+
+      labelEl.textContent = currentMilestone.label;
+
+      const difference = currentMilestone.date - now;
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = String(days).padStart(2, '0');
+      document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+      document.getElementById("mins").textContent = String(minutes).padStart(2, '0');
+      document.getElementById("secs").textContent = String(seconds).padStart(2, '0');
+    };
+
+    updateTimer();
+    const timerInterval = setInterval(updateTimer, 1000);
+  };
+
+  window.addEventListener("load", initCountdown);
 })()

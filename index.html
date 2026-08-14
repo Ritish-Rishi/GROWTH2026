@@ -60,12 +60,20 @@
           <li><a class="nav-link scrollto active" href="index.html#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
           <li>
-            <a class="nav-link scrollto" href="index.html#services" >Conference</a></li>
+            <a class="nav-link scrollto" href="index.html#services" >Call for papers</a></li>
           <!--
           <li><a class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
-              aria-controls="offcanvasWithBothOptions">Updates</a></li> -->
+              aria-controls="offcanvasWithBothOptions">Updates</a><
+          /li> 
+          -->
+          <!-- registration form-->
+           <li>
+            <a class="nav-register-btn" href="https://forms.gle/AVuUpxtCgvnBS4qP9" target="_blank" rel="noopener noreferrer">
+              <span>Register Now</span> <i class="bi bi-box-arrow-up-right ms-1"></i>
+            </a>
+          </li>
           <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="index.html#visit">Paces to Visit</a></li>
+          <li><a class="nav-link scrollto" href="index.html#visit">Places to Visit</a></li>
           <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -107,14 +115,33 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
             <div class="icon-box zoom-card h-100 w-100">
-              <div class="icon"><i class="bi bi-calendar "></i></div>
+              <div class="icon"><i class="bi bi-calendar"></i></div>
               <h4 class="title">Important Dates</h4>
-              <p class="description breakword">
-                Abstract Submission Deadline:<br><strong> 16 August 2026</strong><br>
-                Full paper submission:<br> <strong>25 August 2026</strong><br>
-                Last date of registration:<br><strong> 26 August 2026</strong>
-              </p>
               
+              <!-- Date items with individual IDs for automatic strikethrough -->
+              <div class="description breakword">
+                <div id="date-abstract" class="mb-2">
+                  Abstract Submission Deadline:<br><strong> 16 August 2026</strong>
+                </div>
+                <div id="date-paper" class="mb-2">
+                  Full paper submission:<br> <strong>25 August 2026</strong>
+                </div>
+                <div id="date-registration">
+                  Last date of registration:<br><strong> 26 August 2026</strong>
+                </div>
+              </div>
+
+              <!-- Multi-Stage Dynamic Countdown -->
+              <div class="countdown-wrapper mt-3">
+                <span id="countdown-label" class="countdown-label">Abstract Deadline In:</span>
+                <div id="countdown-timer" class="countdown-boxes d-flex justify-content-center gap-1 mt-1">
+                  <div class="time-box"><span id="days">00</span><small>Days</small></div>
+                  <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
+                  <div class="time-box"><span id="mins">00</span><small>Mins</small></div>
+                  <div class="time-box"><span id="secs">00</span><small>Secs</small></div>
+                </div>
+              </div>
+
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
@@ -205,7 +232,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="conference-text">
-          <h2>Conference</h2>
+          <h2>Call for Papers</h2>
           <p>
 National Conference on GST Rationalisation 2.0 (GROWTH-2026) is in collaboration with ICSSR. It addresses one of the most critical policy priorities for India today—building a modern, efficient and growth-driven GST framework. As India enters a new phase of economic expansion, GST 2.0 has become essential to remove structural gaps, reduce compliance complexities, and ensure that the tax system keeps pace with evolving business models and emerging sectors. This conference is important because GST reforms directly influence investment decisions, ease of doing business, competitiveness of Indian industries, and the ability of high-potential sectors—such as MSMEs, digital commerce, renewable energy, logistics, healthcare and agribusiness—to scale rapidly. A more rationalised GST framework can minimise cascading effects, encourage formalisation, strengthen supply chains and enable wealth creation across regions and socio-economic groups.</p> 
 <p> GROWTH-2026 provides an interdisciplinary platform for policymakers, researchers, industry leaders and practitioners to discuss evidence-based solutions for GST optimisation. Through expert lectures, research presentations and policy dialogues, the conference aims to:</p>
@@ -260,7 +287,7 @@ Cutting-edge insights Expert speakers, Networking opportunities Business Leaders
                The conference will explore broad, interrelated themes connecting Agriculture & Rural Sector, Industrial & Manufacturing Sector ,Services Sector and Allied Area and related domains. It invites the submission of research papers on the following Themes and Sub-Themes (including but not limited to)
               </p>
               <br>
-              <h3>Theme</h3>
+              <h3>Conference Themes</h3>
               <ol>
                 <li>Agriculture, Agri-Business & Rural Transformation.</li>
                 <li>Industry and Manufacturing: Innovation, Competitiveness & Growth. </li>

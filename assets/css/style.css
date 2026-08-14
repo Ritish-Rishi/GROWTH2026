@@ -2626,3 +2626,111 @@ section {
 #footer .credits a {
   color: #f6b024;
 }
+/* Update for timer */
+/*--------------------------------------------------------------
+# Dynamic Countdown & Strikethrough Styles
+--------------------------------------------------------------*/
+.date-passed {
+  text-decoration: line-through;
+  opacity: 0.55;
+  color: #8c98a4 !important;
+  transition: opacity 0.3s ease;
+}
+
+.countdown-wrapper {
+  text-align: center;
+  border-top: 1px dashed #d8e5f1;
+  padding-top: 12px;
+}
+
+.countdown-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #A9711F;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+.countdown-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.countdown-boxes .time-box {
+  background: #05579e;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 3px;
+  min-width: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(5, 87, 158, 0.2);
+}
+
+.countdown-boxes .time-box span {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: "Raleway", sans-serif;
+}
+
+.countdown-boxes .time-box small {
+  font-size: 9px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+@media (max-width: 360px) {
+  .countdown-boxes .time-box {
+    min-width: 42px;
+    padding: 4px 2px;
+  }
+  .countdown-boxes .time-box span {
+    font-size: 14px;
+  }
+  .countdown-boxes .time-box small {
+    font-size: 8px;
+  }
+}
+/*--------------------------------------------------------------
+# Navbar Registration Button 
+--------------------------------------------------------------*/
+.navbar .nav-register-btn {
+  background: #f6b024;
+  color: #1a1a1a !important;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 7px 18px !important;
+  border-radius: 50px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(246, 176, 36, 0.3);
+}
+
+.navbar .nav-register-btn:hover {
+  background: #e09b12;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(246, 176, 36, 0.45);
+}
+
+/* Remove default underline bar on hover */
+.navbar > ul > li > .nav-register-btn:before {
+  display: none !important;
+}
+
+/* Mobile responsive menu styling */
+@media (max-width: 991px) {
+  .navbar-mobile .nav-register-btn {
+    margin: 15px 20px !important;
+    justify-content: center;
+    color: #1a1a1a !important;
+    background: #f6b024 !important;
+    padding: 10px 20px !important;
+    border-radius: 8px;
+  }
+}
