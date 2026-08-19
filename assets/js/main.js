@@ -291,19 +291,14 @@
   const initCountdown = () => {
     const milestones = [
       {
-        id: "date-abstract",
-        label: "Abstract Deadline In:",
-        date: new Date("August 16, 2026 23:59:59 GMT+0530").getTime()
-      },
-      {
         id: "date-paper",
-        label: "Full Paper Deadline In:",
+        label: "Abstract & Full Paper Deadline In:",
         date: new Date("August 25, 2026 23:59:59 GMT+0530").getTime()
       },
       {
         id: "date-registration",
         label: "Registration Closes In:",
-        date: new Date("August 26, 2026 23:59:59 GMT+0530").getTime()
+        date: new Date("August 27, 2026 23:59:59 GMT+0530").getTime()
       }
     ];
 
